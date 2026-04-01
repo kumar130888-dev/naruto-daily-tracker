@@ -93,9 +93,7 @@ form.addEventListener("submit", async (event) => {
       renderTasks();
       form.reset();
       showSuccessMessage("� Dattebayo! Task added successfully! Believe it! 🌟");
-    } else {
-      reportMessage.textContent = "Could not save entry to database.";
-    }
+
     }
   } catch (error) {
     console.error(error);
