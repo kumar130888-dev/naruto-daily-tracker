@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Tracker Report</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>� Naruto Daily Tracker 🌀</h1>
+    <p>Believe it! Track your ninja tasks and become the best! 🌟</p>
+  </header>
+
+  <section class="image-section">
+    <label for="templateImage">Choose template image (optional):</label>
+    <input type="file" id="templateImage" accept="image/*" />
+    <div id="imagePreviewWrapper">
+      <img id="imagePreview" src="https://www.pngitem.com/pimgs/m/522-5225018_naruto-uzumaki-png-transparent-png.png" alt="Naruto face preview" />
+      <p id="imgHint">Naruto face loaded. You can upload your own if you like.</p>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>⚡ Add Your Ninja Task ⚡</h2>
+    <form id="taskForm">
+      <label>Date</label>
+      <input type="date" id="taskDate" required value="" />
+      <label>Task name</label>
+      <select id="taskName" required>
+        <option value="">Select a task</option>
+      </select>
+      <label>Status</label>
+      <select id="taskStatus" required>
+        <option value="Pending">Pending</option>
+        <option value="Done">Done</option>
+        <option value="Skipped">Skipped</option>
+      </select>
+      <label>Notes</label>
+      <input type="text" id="taskNotes" placeholder="Extra details" />
+      <button type="submit">Add entry</button>
+    </form>
+  </section>
+
+  <section class="table-section">
+    <h2>� My Mission Scroll 📜</h2>
+    <table id="entriesTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>📅 Date</th>
+          <th>🎯 Mission</th>
+          <th>✅ Status</th>
+          <th>📝 Notes</th>
+          <th>🔧 Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="report-section">
+    <h2>�️ Reports & Jutsu 🌪️</h2>
+    <button id="exportCsv">� Download Scroll Report</button>
+    <button id="printReport">🖨️ Seal the Scroll</button>
+    <div id="reportMessage" role="status"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
